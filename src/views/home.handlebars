@@ -1,0 +1,30 @@
+
+
+<h1>Productos</h1>
+
+<h2>Bienvenido! {{usuario.email}} </h2>
+
+<form action="/api/sessions/logout" method="POST">
+    <button type="submit"> Logout </button>
+</form>
+<div class="container">
+    {{#each productos}}
+    <div class="card">
+        <h2>{{this.title}}</h2>
+        <figure>{{this.description}}</figure>
+        <p>{{this.price}}</p>
+        <p>{{this.category}}</p>
+        <button>Agregar al Carrito</button>
+    </div>
+    {{/each}}
+</div>
+
+{{#if hasPrevPage}}
+<a href="/api/sessions/current?page={{prevPage}}">Anterior</a>
+{{/if}}
+
+{{#if hasNextPage}}
+<a href="/api/sessions/current?page={{nextPage}}">Siguiente</a>
+{{/if}}
+
+<p>{{currentPage}} / {{totalPages}} </p>

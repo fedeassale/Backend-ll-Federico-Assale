@@ -1,0 +1,15 @@
+<div class="container mt-5">
+
+
+    {{#if cart.cart.length}}
+    <h5>ID del Carrito: <strong>{{cart._id}}</strong></h5>
+            {{#each cart.cart}}
+            <div>
+                <h5>producto: {{title}}</h5>
+                <p>precio: $ {{price}}</p>
+                <p >cantidad: {{quantity}}</p>
+            </div>
+                
+            {{/each}}
+    {{/if}}
+</div>

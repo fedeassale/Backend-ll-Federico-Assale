@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "title": "Caja de Fijación",
+    "description": "Caja de Fijación para techos de madera.",
+    "code": "WM-001",
+    "price": 25.99,
+    "status": true,
+    "stock": 150,
+    "category": "Electronics",
+    "thumbnails": [
+      "images/ti-001-side.jpg",
+      "images/ti-001-side.jpg"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Taladro Inalámbrico",
+    "description": "Taladro inalámbrico con batería recargable de larga duración y múltiples velocidades.",
+    "code": "TI-002",
+    "price": 79.99,
+    "status": true,
+    "stock": 75,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/ti-002-front.jpg",
+      "images/ti-002-side.jpg"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Juego de Destornilladores",
+    "description": "Juego de destornilladores de precisión con mangos ergonómicos.",
+    "code": "JD-003",
+    "price": 15.49,
+    "status": true,
+    "stock": 200,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/jd-003-front.jpg",
+      "images/jd-003-side.jpg"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Martillo de Garra",
+    "description": "Martillo de garra de acero con mango de goma antideslizante.",
+    "code": "MG-004",
+    "price": 12.99,
+    "status": true,
+    "stock": 100,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/mg-004-front.jpg",
+      "images/mg-004-side.jpg"
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Llave Inglesa Ajustable",
+    "description": "Llave inglesa ajustable de acero forjado para mayor durabilidad.",
+    "code": "LIA-005",
+    "price": 8.99,
+    "status": true,
+    "stock": 120,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/lia-005-front.jpg",
+      "images/lia-005-side.jpg"
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Sierra de Mano",
+    "description": "Sierra de mano con hoja de acero templado y mango ergonómico.",
+    "code": "SH-006",
+    "price": 14.49,
+    "status": true,
+    "stock": 80,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/sh-006-front.jpg",
+      "images/sh-006-side.jpg"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Cinta Métrica",
+    "description": "Cinta métrica retráctil de 5 metros con carcasa resistente.",
+    "code": "CM-007",
+    "price": 5.99,
+    "status": true,
+    "stock": 250,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/cm-007-front.jpg",
+      "images/cm-007-side.jpg"
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Nivel de Burbuja",
+    "description": "Nivel de burbuja de aluminio con burbujas de alta visibilidad.",
+    "code": "NB-008",
+    "price": 9.99,
+    "status": true,
+    "stock": 150,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/nb-008-front.jpg",
+      "images/nb-008-side.jpg"
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Alicate de Corte",
+    "description": "Alicate de corte con mango aislado y cuchillas de alta precisión.",
+    "code": "AC-009",
+    "price": 10.49,
+    "status": true,
+    "stock": 130,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/ac-009-front.jpg",
+      "images/ac-009-side.jpg"
+    ]
+  },
+  {
+    "id": 10,
+    "title": "Llave de Tubo",
+    "description": "Llave de tubo ajustable con agarre antideslizante.",
+    "code": "LT-010",
+    "price": 11.99,
+    "status": true,
+    "stock": 90,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/lt-010-front.jpg",
+      "images/lt-010-side.jpg"
+    ]
+  },
+  {
+    "id": 11,
+    "title": "Escuadra Metálica",
+    "description": "Escuadra metálica de 30 cm para medición precisa.",
+    "code": "EM-011",
+    "price": 6.49,
+    "status": true,
+    "stock": 160,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/em-011-front.jpg",
+      "images/em-011-side.jpg"
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Set de Llaves Allen",
+    "description": "Set de llaves Allen de acero inoxidable en diferentes tamaños.",
+    "code": "SLA-012",
+    "price": 7.49,
+    "status": true,
+    "stock": 180,
+    "category": "Ferretería",
+    "thumbnails": [
+      "images/sla-012-front.jpg",
+      "images/sla-012-side.jpg"
+    ]
+  }
+]
