@@ -15,7 +15,7 @@ router.get("/register", (req, res) => {
     res.render("register"); 
 })
 
-router.get("/api/sessions/current",async (req,res)=>{
+router.get("/products",async (req,res)=>{
     let page = req.query.page|| 1;
     let limit = 2;
    

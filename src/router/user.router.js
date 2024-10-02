@@ -79,7 +79,6 @@ router.post("/login", async (req, res) => {
 })
 
 router.get("/current", passport.authenticate("current", {session: false}), (req, res) => {
-     console.log(req.user);
      res.render("home", { usuario: req.user.usuario}); 
  })
 
