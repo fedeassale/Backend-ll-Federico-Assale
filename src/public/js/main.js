@@ -55,3 +55,33 @@ productForm.addEventListener('submit', (e) => {
     socket.emit("addProduct", product);
     productForm.reset();
 });
+
+// document.addEventListener('DOMContentLoaded', function () {
+//     const buttons = document.querySelectorAll('.add-to-cart');
+
+//     buttons.forEach(button => {
+//         button.addEventListener('click', async (event) => {
+//             const productId = event.target.getAttribute('data-product-id');
+//             const cartId = '{{user.cart}}'; // Supongo que el carrito está vinculado al usuario
+
+//             try {
+//                 const response = await fetch(`/api/carts/${cartId}/products/${productId}`, {
+//                     method: 'POST',
+//                     headers: {
+//                         'Content-Type': 'application/json'
+//                     },
+//                     body: JSON.stringify({ quantity: 1 }) // Puedes ajustar la cantidad según el caso
+//                 });
+
+//                 if (response.ok) {
+//                     alert('Producto agregado al carrito');
+//                 } else {
+//                     alert('Error al agregar el producto');
+//                 }
+//             } catch (error) {
+//                 console.error('Error:', error);
+//                 alert('Error al agregar el producto');
+//             }
+//         });
+//     });
+// });

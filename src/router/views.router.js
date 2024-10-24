@@ -7,6 +7,10 @@ import CartManager from "../dao/db/cart-manager-db.js";
 const cartManager = new CartManager();
 
 
+import {soloAdmin , soloUser} from "../middleware/auth.js";
+import passport from "passport";
+
+
 router.get("/login", (req, res) => {
     res.render("login"); 
 })
@@ -15,7 +19,7 @@ router.get("/register", (req, res) => {
     res.render("register"); 
 })
 
-router.get("/products",async (req,res)=>{
+router.get("/products", passport.authenticate("jwt", { session: false }),soloUser,async (req,res)=>{
     let page = req.query.page|| 1;
     let limit = 2;
    
@@ -26,6 +30,10 @@ router.get("/products",async (req,res)=>{
         return rest;
     })
     res.render("home",{
+        user: {
+            email: req.user.email,
+            cart: req.user.cart // Asegúrate de que el usuario tenga el ID del carrito
+        },
         productos:productoResultadoFinal,
         hasPrevPage: listadoProductos.hasPrevPage,
         hasNextPage: listadoProductos.hasNextPage,
@@ -63,11 +71,11 @@ router.get('/carts/:cid', async (req, res) => {
 
     } catch (error) {
         console.error("Error al obtener el carrito:");
-        res.status(500);
+        res.status(500).send("Error interno del servidor");
     }
 });
 
-router.get("/realtimeproducts",async (req,res)=>{
+router.get("/realtimeproducts", passport.authenticate("jwt", { session: false }),soloAdmin,async (req,res)=>{
     res.render("realtimeproducts");
 });
 

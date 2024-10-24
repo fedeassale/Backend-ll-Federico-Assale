@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2>Compra Finalizada</h2>
+    
+    {{#if ticket}}
+        <div class="card mb-4">
+            <div class="card-body">
+                <h3>Detalles del Ticket</h3>
+                <p><strong>Código:</strong> {{ticket.code}}</p>
+                <p><strong>Total:</strong> ${{ticket.amount}}</p>
+                <p><strong>Fecha:</strong> {{ticket.purchase_datetime}}</p>
+                <p><strong>Comprador:</strong> {{ticket.purchaser}}</p>
+            </div>
+        </div>
+    {{/if}}
+
+    {{#if failedProducts.length}}
+        <div class="alert alert-warning">
+            <h4>Productos no disponibles:</h4>
+            <ul>
+                {{#each failedProducts}}
+                    <li>{{this}}</li>
+                {{/each}}
+            </ul>
+            <p>Estos productos permanecerán en su carrito para una futura compra.</p>
+        </div>
+    {{/if}}
+
+    <a href="/products" class="btn btn-primary">Volver a Productos</a>
+</div>
