@@ -1,13 +1,10 @@
 
-import TicketModel from "../dao/models/ticket.model.js";
+import ticketDao from "../dao/ticket.dao.js";
 
 class TicketRepository {
     async createTicket(ticketData) {
-        const ticket = new TicketModel(ticketData);
-        return await ticket.save();
+        return await ticketDao.create(ticketData);
     }
-
-    
 }
 
-export default new TicketRepository();
+ export default TicketRepository;

@@ -4,8 +4,25 @@ class ProductDao{
     async findById(id){
         return await ProductModel.findById(id);
     }
-    async find(query){
-        return await ProductModel.find(query);
+    
+    async find(query) {
+        
+        const { limit = 10, page = 1, sort, query: searchQuery } = query;
+
+        
+        const filter = searchQuery ? { title: { $regex: searchQuery, $options: "i" } } : {};
+
+        
+        const limitNumber = Number(limit);
+        const pageNumber = Number(page);
+
+       
+        const products = await ProductModel.find(filter)
+            .limit(limitNumber) 
+            .skip((pageNumber - 1) * limitNumber) 
+            .sort(sort ? { price: sort === "desc" ? -1 : 1 } : {}); 
+
+        return products;
     }
     async save(productData){
         const product = new ProductModel(productData)

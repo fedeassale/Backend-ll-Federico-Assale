@@ -18,6 +18,9 @@ router.get("/login", (req, res) => {
 router.get("/register", (req, res) => {
     res.render("register"); 
 })
+router.get("/checkout", (req, res) => {
+    res.render("checkout"); 
+})
 
 router.get("/products", passport.authenticate("jwt", { session: false }),soloUser,async (req,res)=>{
     let page = req.query.page|| 1;
@@ -32,7 +35,7 @@ router.get("/products", passport.authenticate("jwt", { session: false }),soloUse
     res.render("home",{
         user: {
             email: req.user.email,
-            cart: req.user.cart // Asegúrate de que el usuario tenga el ID del carrito
+            cart: req.user.cart 
         },
         productos:productoResultadoFinal,
         hasPrevPage: listadoProductos.hasPrevPage,
